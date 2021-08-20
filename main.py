@@ -4,11 +4,9 @@ sender = "sender@gmail.com"
 receiver = "receiver@gmail.com"
 password = "Password"
 subject = "Subject"
-body = """
-Body
+body = """Body
 """
 
-# header
 message = f"""From: {sender}
 To: {receiver}
 Subject: {subject}\n
@@ -25,5 +23,5 @@ try:
     print("Email has been sent")
 
 except smtplib.SMTPAuthenticationError:
-    print("Error... Make sure you enable \"Less Secure App\" in Google Settings!)
+    print("Error")
 
