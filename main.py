@@ -1,7 +1,7 @@
 import smtplib
 
-sender = "Sender_Email@gmail.com"
-receiver = "Receiver_Email@gmail.com"
+sender = "sender@gmail.com"
+receiver = "receiver@gmail.com"
 password = "Password"
 subject = "Subject"
 body = """
@@ -22,8 +22,8 @@ try:
     server.login(sender,password)
     print("Logging in...")
     server.sendmail(sender, receiver, message)
-    print("Done!")
+    print("Email has been sent")
 
 except smtplib.SMTPAuthenticationError:
-    print("Error")
+    print("Error... Make sure you enable \"Less Secure App\" in Google Settings!)
 
